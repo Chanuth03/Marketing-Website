@@ -22,9 +22,14 @@
                 <a href="#about">About</a>
                 <a href="#download">Download App</a>
             </div>
+            <div class="mobile-menu-btn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
         </div>
     </nav>
-
+ 
     <!-- Hero Section -->
     <section class="hero">
         <div class="hero-backgrounds">
@@ -283,7 +288,7 @@
             <p>&copy; 2025 CeylonSphere. All rights reserved.</p>
         </div>
     </footer>
-
+ 
     <script>
         // Add scroll effect to navbar
         window.addEventListener('scroll', () => {
@@ -325,8 +330,25 @@
             setInterval(showNext, 5000);
         }
 
-// Initialize slideshow when page loads
-document.addEventListener('DOMContentLoaded', setupSlideshow);
+    // Initialize slideshow when page loads
+    document.addEventListener('DOMContentLoaded', setupSlideshow);
+
+    // Mobile menu functionality
+    const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+    const navLinks = document.querySelector('.nav-links');
+
+    mobileMenuBtn.addEventListener('click', () => {
+        mobileMenuBtn.classList.toggle('active');
+        navLinks.classList.toggle('active');
+    });
+
+    // Close mobile menu when clicking a link
+    document.querySelectorAll('.nav-links a').forEach(link => {
+        link.addEventListener('click', () => {
+            mobileMenuBtn.classList.remove('active');
+            navLinks.classList.remove('active');
+        });
+    });
     </script>
 </body>
 </html>
