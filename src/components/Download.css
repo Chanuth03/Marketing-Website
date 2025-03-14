@@ -1,0 +1,126 @@
+.download {
+  padding: 40px 20px;
+  background: linear-gradient(135deg, #f8f9fa 100%, #e9ecef 0%);
+}
+
+.download-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+}
+
+.download-content {
+  text-align: center;
+  max-width: 800px;
+}
+
+.download-text {
+  text-align: left;
+}
+
+.download-text h2 {
+  font-size: 2.5rem;
+  color: #2c3e50;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.download-text p {
+  font-size: 1.2rem;
+  color: #666;
+  margin-bottom: 40px;
+}
+
+.app-features {
+  margin: 40px 0;
+}
+
+.app-features ul {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.app-features li {
+  color: #666;
+  position: relative;
+  padding-left: 30px;
+  text-align: left;
+  font-size: 1.1rem;
+}
+
+.app-features li:before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: #2c3e50;
+  font-weight: bold;
+}
+
+.store-buttons {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.store-button img {
+  height: 50px;
+  transition: transform 0.3s ease;
+  border-radius: 8px;
+}
+
+.store-button:hover img {
+  transform: translateY(-5px);
+}
+
+.app-mockup {
+  position: relative;
+}
+
+.app-mockup img {
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .download {
+    padding: 60px 20px;
+  }
+
+  .download-content {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .download-text {
+    text-align: center;
+    order: 1;
+  }
+
+  .app-mockup {
+    order: 2;
+  }
+
+  .app-features ul {
+    grid-template-columns: 1fr;
+  }
+
+  .store-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .store-button img {
+    height: 45px;
+  }
+
+  .store-buttons {
+    justify-content: center;
+  }
+}

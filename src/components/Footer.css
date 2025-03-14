@@ -1,0 +1,149 @@
+.footer {
+  background: #2c3e50;
+  color: white;
+  padding: 60px 20px 20px;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-logo {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.footer-logo img {
+  height: 80px;
+  filter: brightness(0) invert(1);
+  transition: transform 0.3s ease;
+}
+
+.footer-logo img:hover {
+  transform: scale(1.1);
+}
+
+.footer-content {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  margin-bottom: 40px;
+}
+
+.footer-section h3 {
+  color: #fff;
+  margin-bottom: 20px;
+  font-size: 1.2rem;
+  position: relative;
+  padding-bottom: 10px;
+}
+
+.footer-section h3::after {
+  display: none;
+}
+
+.footer-section p {
+  margin-bottom: 10px;
+  color: #ecf0f1;
+}
+
+.footer-section a {
+  color: #3498db;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-section a:hover {
+  color: #2980b9;
+}
+
+.social-links {
+  display: flex;
+  gap: 20px;
+}
+
+.social-links a {
+  color: #ecf0f1;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  padding: 8px 16px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.social-links a:hover {
+  background: #3498db;
+  color: white;
+  transform: translateY(-2px);
+  text-decoration: none;
+}
+
+.footer-section nav {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.footer-section nav a {
+  color: #ecf0f1;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.footer-section nav a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -4px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #3498db;
+  transition: width 0.3s ease;
+  max-width: 40px;
+}
+
+.footer-section nav a:hover::after {
+  width: 100%;
+  max-width: 40px;
+}
+
+.footer-section p a {
+  text-decoration: none;
+  color: #ecf0f1;
+}
+
+.footer-section p a:hover {
+  color: #3498db;
+  text-decoration: none;
+}
+
+.footer-bottom {
+  text-align: center;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  color: #ecf0f1;
+}
+
+@media (max-width: 768px) {
+  .footer-content {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 30px;
+  }
+  
+  .footer-section h3::after {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .social-links {
+    justify-content: center;
+  }
+  
+  .footer-section nav {
+    align-items: center;
+  }
+}
