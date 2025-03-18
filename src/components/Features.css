@@ -26,8 +26,9 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  transition: transform 0.3s ease;
+  transition: all 0.3s ease-in-out; /* Changed from transform only */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  cursor: pointer; /* Add cursor pointer to indicate interactivity */
 }
 
 .feature-card::before {
@@ -37,21 +38,25 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(0, 0, 0, 0.204); 
-  transition: background 0.3s ease;
+  background: rgba(0, 0, 0, 0.2); /* Slightly darker initial state */
+  transition: all 0.3s ease-in-out;
+  z-index: 1; /* Ensure overlay is above the background but below content */
 }
 
 .feature-card:hover {
   transform: translateY(-15px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+  border-color: #52B788;
+  box-shadow: 0 8px 16px rgba(82, 183, 136, 0.2);
 }
 
 .feature-card:hover::before {
-  background: rgba(0, 0, 0, 0.237);
+  background: rgba(0, 0, 0, 0.4); /* Darker overlay on hover */
 }
 
 .feature-content {
   position: relative;
-  z-index: 1;
+  z-index: 2; /* Ensure content stays above the overlay */
   padding: 30px;
   color: white;
   height: 100%;
@@ -66,6 +71,12 @@
     rgba(0, 0, 0, 0.1) 100%
   );
   text-align: center; /* Added to center text */
+}
+
+/* Add transition for content */
+.feature-card:hover .feature-content {
+  transform: scale(1.05);
+  transition: transform 0.3s ease-in-out;
 }
 
 .feature-content h3 {

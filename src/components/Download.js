@@ -17,7 +17,7 @@ const Download = () => {
                 <li>Interactive AR Experience</li>
                 <li>Offline Maps & Guides</li>
                 <li>Real-time Updates</li>
-                <li>24/7 Travel Assistant</li>
+                <li>24x7 Travel Assistant</li>
               </ul>
             </div>
 
