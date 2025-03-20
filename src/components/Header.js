@@ -4,13 +4,13 @@ import logo from '../assets/pics/Logo img/Logo-07.png';
 
 const Header = () => {
   const [hasBackground, setHasBackground] = useState(false);
-  const [activeSection, setActiveSection] = useState('');  // Changed initial state to empty
+  const [activeSection, setActiveSection] = useState('');
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
       setHasBackground(window.scrollY > 100);
 
-      // Check all sections including hero
       const sections = ['hero', 'features', 'about', 'download'];
       const currentSection = sections.find(section => {
         const element = document.getElementById(section);
@@ -21,41 +21,50 @@ const Header = () => {
         return false;
       });
 
-      setActiveSection(currentSection || 'hero'); // Default to hero if no section found
+      setActiveSection(currentSection || 'hero');
     };
 
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  const toggleMobileMenu = () => {
+    setIsMobileMenuOpen(!isMobileMenuOpen);
+  };
+
+  const closeMobileMenu = () => {
+    setIsMobileMenuOpen(false);
+  };
+
   return (
-    <nav className={`navbar ${hasBackground ? 'with-background' : ''}`} id='navbar'>
+    <nav className={`navbar ${hasBackground ? 'with-background' : ''} ${isMobileMenuOpen ? 'menu-open' : ''}`} id='navbar'>
       <div className="nav-content">
         <img src={logo} alt="Logo" className="logo" />
-        <div className="nav-links">
-          <a href="#hero" className={activeSection === 'hero' ? 'active' : ''}>
+        <div className={`nav-links ${isMobileMenuOpen ? 'active' : ''}`}>
+          <a href="#hero" className={activeSection === 'hero' ? 'active' : ''} onClick={closeMobileMenu}>
             Home
             {activeSection === 'hero' && <span className="indicator"></span>}
           </a>
-          <a href="#features" className={activeSection === 'features' ? 'active' : ''}>
+          <a href="#features" className={activeSection === 'features' ? 'active' : ''} onClick={closeMobileMenu}>
             Features
             {activeSection === 'features' && <span className="indicator"></span>}
           </a>
-          <a href="#about" className={activeSection === 'about' ? 'active' : ''}>
+          <a href="#about" className={activeSection === 'about' ? 'active' : ''} onClick={closeMobileMenu}>
             About
             {activeSection === 'about' && <span className="indicator"></span>}
           </a>
-          <a href="#download" className={activeSection === 'download' ? 'active' : ''}>
+          <a href="#download" className={activeSection === 'download' ? 'active' : ''} onClick={closeMobileMenu}>
             Download App
             {activeSection === 'download' && <span className="indicator"></span>}
           </a>
-          <a href="#registration" className="register-btn">Join Us</a>
+          <a href="#registration" className="register-btn" onClick={closeMobileMenu}>Join Us</a>
         </div>
-        <div className="mobile-menu-btn">
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
+        
+        <button className={`mobile-menu-btn ${isMobileMenuOpen ? 'active' : ''}`} onClick={toggleMobileMenu} aria-label="Toggle menu">
+          <span className="hamburger-line"></span>
+          <span className="hamburger-line"></span>
+          <span className="hamburger-line"></span>
+        </button>
       </div>
     </nav>
   );

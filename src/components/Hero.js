@@ -1,14 +1,14 @@
 import React from 'react';
 import './Hero.css';
 
-import image1 from '../assets/pics/podi kali 1.png';
-import image2 from '../assets/pics/podi kali 2.png';
-import image3 from '../assets/pics/podi kali 3.png';
-import image4 from '../assets/pics/podi kali 4.png';
-import image5 from '../assets/pics/podi kali 5.png';
-import image7 from '../assets/pics/podi kali 6.png';
-import image8 from '../assets/pics/podi kali 7.png';
-import image9 from '../assets/pics/podi kali 8.png';
+// import image1 from '../assets/pics/podi kali 1.png';
+// import image2 from '../assets/pics/podi kali 2.png';
+// import image3 from '../assets/pics/podi kali 3.png';
+// import image4 from '../assets/pics/podi kali 4.png';
+// import image5 from '../assets/pics/podi kali 5.png';
+// import image7 from '../assets/pics/podi kali 6.png';
+// import image8 from '../assets/pics/podi kali 7.png';
+// import image9 from '../assets/pics/podi kali 8.png';
 
 const Hero = () => {
   // const leftImages = [
