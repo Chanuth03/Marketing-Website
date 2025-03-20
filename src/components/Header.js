@@ -39,7 +39,7 @@ const Header = () => {
   return (
     <nav className={`navbar ${hasBackground ? 'with-background' : ''} ${isMobileMenuOpen ? 'menu-open' : ''}`} id='navbar'>
       <div className="nav-content">
-        <img src={logo} alt="Logo" className="logo" />
+        <img href="#hero" src={logo} alt="Logo" className="logo" />
         <div className={`nav-links ${isMobileMenuOpen ? 'active' : ''}`}>
           <a href="#hero" className={activeSection === 'hero' ? 'active' : ''} onClick={closeMobileMenu}>
             Home
