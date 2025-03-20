@@ -99,14 +99,17 @@
     position: fixed;
     top: 80px;
     left: -100%;
-    width: 100%;
-    height: calc(100vh - 80px);
-    background: rgba(255, 255, 255, 0.95);
-    backdrop-filter: blur(10px);
+    width: 80%; /* Reduced from 100% */
+    height: auto; /* Changed from 100vh */
+    max-height: 400px; /* Added max height */
+    background: rgba(255, 255, 255, 0.8); /* More transparent background */
+    backdrop-filter: blur(8px);
     flex-direction: column;
     padding: 20px 0;
     transition: left 0.3s ease;
     z-index: 999;
+    border-radius: 0 15px 15px 0; /* Added rounded corners */
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
   }
 
   .nav-links.active {
@@ -116,7 +119,28 @@
   .nav-links a {
     width: 100%;
     text-align: center;
-    padding: 15px 0;
+    padding: 12px 0;
+    font-size: 1rem;
+  }
+
+  .register-btn {
+    margin: 15px auto;
+    width: 80%;
+  }
+
+  .mobile-menu-btn {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    cursor: pointer;
+    z-index: 1000;
+  }
+
+  .hamburger-line {
+    width: 24px;
+    height: 2px;
+    background: #52B788;
+    transition: all 0.3s ease;
   }
 
   .mobile-menu-btn {
@@ -258,7 +282,7 @@
 
   .indicator {
     bottom: 5px;
-    height: 2px;
+    height: px;
   }
 
   .nav-links a + a {

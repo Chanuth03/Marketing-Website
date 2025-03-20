@@ -88,7 +88,7 @@
 .about-text p {
   color: #666;
   line-height: 1.6;
-  margin-bottom: 20px;
+  margin-bottom: 0px;
 }
 
 .about-text ul {
@@ -328,6 +328,6 @@
   }
   
   .logo-container {
-    padding-bottom: 60%;
+    padding-bottom: 5%;
   }
 }
