@@ -9,7 +9,9 @@ const Footer = () => {
     <footer className="footer">
       <div className="footer-container">
         <div className="footer-logo">
-          <img src={logo} alt="CeylonSphere Logo" />
+          <a href="#hero">
+            <img src={logo} alt="CeylonSphere Logo" />
+          </a>
         </div>
         
         <div className="footer-content">
@@ -22,13 +24,13 @@ const Footer = () => {
           <div className="footer-section">
             <h3>Follow Us</h3>
             <div className="social-links">
-              <a href="#" className="facebook">
+              <a href="#" aria-label="Facebook">
                 <FontAwesomeIcon icon={faFacebook} />
               </a>
-              <a href="https://www.instagram.com/ceylonsphere/?hl=en" className="instagram">
+              <a href="https://www.instagram.com/ceylonsphere/?hl=en" aria-label="Instagram">
                 <FontAwesomeIcon icon={faInstagram} />
               </a>
-              <a href="#" className="linkedin">
+              <a href="#" aria-label="LinkedIn">
                 <FontAwesomeIcon icon={faLinkedinIn} />
               </a>
             </div>
