@@ -1,6 +1,8 @@
 import React from 'react';
 import './Footer.css';
 import logo from '../assets/pics/Logo img/Logo-01.png';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faFacebook, faInstagram, faLinkedinIn } from '@fortawesome/free-brands-svg-icons';
 
 const Footer = () => {
   return (
@@ -20,9 +22,15 @@ const Footer = () => {
           <div className="footer-section">
             <h3>Follow Us</h3>
             <div className="social-links">
-              <a href="#">Facebook</a>
-              <a href="https://www.instagram.com/ceylonsphere/?hl=en">Instagram</a>
-              <a href="#">Linkedin</a>
+              <a href="#" className="facebook">
+                <FontAwesomeIcon icon={faFacebook} />
+              </a>
+              <a href="https://www.instagram.com/ceylonsphere/?hl=en" className="instagram">
+                <FontAwesomeIcon icon={faInstagram} />
+              </a>
+              <a href="#" className="linkedin">
+                <FontAwesomeIcon icon={faLinkedinIn} />
+              </a>
             </div>
           </div>
           

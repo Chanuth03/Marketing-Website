@@ -27,6 +27,16 @@
   justify-content: space-between;
 }
 
+.nav-content > a {
+  display: inline-block;
+  text-decoration: none;
+  transition: transform 0.3s ease;
+}
+
+.nav-content > a:hover {
+  transform: scale(1.05);
+}
+
 .logo {
   height: 50px;
   width: auto;

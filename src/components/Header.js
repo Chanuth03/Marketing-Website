@@ -39,7 +39,9 @@ const Header = () => {
   return (
     <nav className={`navbar ${hasBackground ? 'with-background' : ''} ${isMobileMenuOpen ? 'menu-open' : ''}`} id='navbar'>
       <div className="nav-content">
-        <img href="#hero" src={logo} alt="Logo" className="logo" />
+        <a href="#hero" onClick={closeMobileMenu}>
+          <img src={logo} alt="Logo" className="logo" />
+        </a>
         <div className={`nav-links ${isMobileMenuOpen ? 'active' : ''}`}>
           <a href="#hero" className={activeSection === 'hero' ? 'active' : ''} onClick={closeMobileMenu}>
             Home
